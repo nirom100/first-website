@@ -98,7 +98,7 @@ body {
   cursor: pointer;
 }
 
-.title-page {
+.heading {
   font-size: var(--section-heading-size);
   letter-spacing: 0.05rem;
   border-bottom: 1px solid var(--accent-light);
@@ -107,7 +107,7 @@ body {
 }
 
 .about {
-  height: 70vh;
+  height: 70%;
   margin: 2rem;
 }
 
@@ -150,6 +150,36 @@ body {
 .about-image-3 {
   grid-column: 2;
   grid-row: 2;
+}
+
+.opening-hours {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgb(0 0 0 / 0.9), rgb(0 0 0 / 0.5)), url("info.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: var(--text);
+}
+
+.days-hours {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 1.5rem;
+}
+
+.days {
+  text-align: left;
+}
+
+.hours {
+  text-align: right;
 }
 
 /* TABLET SIZE */
