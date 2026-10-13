@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --background: #181616;
+  --text: whitesmoke;
+  --accent: #6e0303;
+  --accent-light: #9e3131;
+
+  --font-heading: "Mea Culpa", cursive;
+  --font-body: Helvetica, sans-serif;
+
+  --hero-title-size: 4rem;
+  --nav-size: 0.8rem;
+  --body-size: 1rem;
+  --section-heading-size: 1.5rem;
+}
+
+body {
+  background-color: var(--background);
+  font-family: var(--font-body);
+}
+
+.placeholder {
+  height: 300vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  height: 4rem;
+  font-size: var(--nav-size);
+}
+
+.navbar-item {
+  color: var(--text);
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-item:hover {
+  color: var(--accent-light);
+}
+
+.hero {
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.9)), url("hero.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: var(--hero-title-size);
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--body-size);
+  margin-top: 1rem;
+  color: var(--text);
+}
+
+.main-button {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--body-size);
+  background-color: var(--accent);
+  padding: 20px 40px;
+  margin-top: 40px;
+  color: var(--text);
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-button:hover {
+  background-color: transparent;
+  color: var(--accent-light);
+  border: 1px solid var(--accent-light);
+  cursor: pointer;
+}
+
+.title-page {
+  font-size: var(--section-heading-size);
+  letter-spacing: 0.05rem;
+  border-bottom: 1px solid var(--accent-light);
+  text-transform: uppercase;
+  margin: 1rem 0 1rem 0;
+}
+
+.about {
+  height: 70vh;
+  margin: 2rem;
+}
+
+.about-description {
+  font-size: var(--body-size);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  width: 100%;
+  height: 40%;
+}
+
+.about-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-image-1 {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+.about-image-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.about-image-3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* TABLET SIZE */
+@media only screen and (min-width: 600px) {
+  :root {
+    --hero-title-size: 5rem;
+  }
+  .main-button {
+    margin-top: 60px;
+  }
+}
+
+/* DESKTOP SIZE */
+@media only screen and (min-width: 1000px) {
+  :root {
+    --hero-title-size: 6rem;
+    --nav-size: 1rem;
+  }
+  .navbar {
+    gap: 3rem;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: start;
+    gap: 4rem;
+    margin: 6rem 5rem;
+  }
+}
