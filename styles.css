@@ -38,7 +38,8 @@ body {
   font-size: var(--nav-size);
 }
 
-.navbar-item {
+.navbar-item,
+.footer-item {
   color: var(--text);
   letter-spacing: 0.05rem;
   text-decoration: none;
@@ -46,7 +47,8 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.navbar-item:hover {
+.navbar-item:hover,
+.footer-item:hover {
   color: var(--accent-light);
 }
 
@@ -100,6 +102,24 @@ body {
   background-color: transparent;
   color: var(--accent-light);
   border: 1px solid var(--accent-light);
+  cursor: pointer;
+}
+
+.main-button-inverted {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--body-size);
+  background-color: transparent;
+  color: var(--accent-light);
+  border: 1px solid var(--accent-light);
+  padding: 20px 40px;
+}
+
+.main-button-inverted:hover {
+  background-color: var(--accent);
+  color: var(--text);
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -223,6 +243,27 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  font-size: var(--nav-size);
+  background-color: #303030;
+}
+
+.footer-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 /* TABLET SIZE */

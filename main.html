@@ -113,13 +113,30 @@
               <p>1337 Beispieldorf</p>
             </div>
             <div class="contact-buttons">
-              <button class="main-button">Jetzt anrufen!</button>
-              <button class="main-button">Email schreiben</button>
+              <button
+                class="main-button"
+                onclick="location.href = 'call:0123456789'"
+              >
+                Jetzt anrufen!
+              </button>
+              <button
+                class="main-button-inverted"
+                onclick="location.href = 'mailto:xyz@abc.com'"
+              >
+                Email schreiben
+              </button>
             </div>
           </div>
         </div>
       </section>
-      <div class="placeholder"></div>
+      <footer class="footer">
+        <div class="footer-items">
+          <a href="#" class="footer-item">Impressum</a>
+          <a href="#" class="footer-item">Datenschutzerklärung</a>
+          <a href="#" class="footer-item">Jobs</a>
+        </div>
+        <p class="footer-copyright">© 2026 Nina Romanow</p>
+      </footer>
     </main>
   </body>
 </html>
