@@ -21,6 +21,7 @@
 body {
   background-color: var(--background);
   font-family: var(--font-body);
+  color: var(--text);
 }
 
 .placeholder {
@@ -68,7 +69,6 @@ body {
   font-weight: 400;
   font-size: var(--hero-title-size);
   line-height: 1.1;
-  color: var(--text);
 }
 
 .hero-subtitle {
@@ -76,7 +76,6 @@ body {
   font-weight: 300;
   font-size: var(--body-size);
   margin-top: 1rem;
-  color: var(--text);
 }
 
 .main-button {
@@ -85,7 +84,6 @@ body {
   font-size: var(--body-size);
   background-color: var(--accent);
   padding: 20px 40px;
-  margin-top: 40px;
   color: var(--text);
   border: 1px solid transparent;
   transition: all 0.2s ease-in-out;
@@ -104,10 +102,10 @@ body {
   border-bottom: 1px solid var(--accent-light);
   text-transform: uppercase;
   margin: 1rem 0 1rem 0;
+  width: fit-content;
 }
 
 .about {
-  height: 70%;
   margin: 2rem;
 }
 
@@ -117,8 +115,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  color: var(--text);
   margin-bottom: 2rem;
+  gap: 1rem;
 }
 
 .about-images {
@@ -153,7 +151,6 @@ body {
 }
 
 .opening-hours {
-  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,7 +160,10 @@ body {
   background-size: cover;
   background-position: center;
   text-align: center;
-  color: var(--text);
+}
+
+.opening-hours-container {
+  margin: 2rem;
 }
 
 .days-hours {
@@ -172,6 +172,7 @@ body {
   justify-content: space-between;
   width: 100%;
   line-height: 1.5rem;
+  color: var(--text);
 }
 
 .days {
@@ -182,13 +183,37 @@ body {
   text-align: right;
 }
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  gap: 2rem;
+}
+
+.contact-image {
+  width: 100%;
+}
+
+.contact-details p {
+  margin-top: 0.5rem;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 /* TABLET SIZE */
 @media only screen and (min-width: 600px) {
   :root {
     --hero-title-size: 5rem;
   }
-  .main-button {
-    margin-top: 60px;
+  .contact-container {
+    flex-direction: row;
+  }
+  .contact-image {
+    width: 40%;
   }
 }
 
@@ -208,5 +233,14 @@ body {
     align-items: start;
     gap: 4rem;
     margin: 6rem 5rem;
+  }
+  .days-hours {
+    font-size: 1.25rem;
+  }
+  .contact-container {
+    flex-direction: row;
+  }
+  .contact-image {
+    width: 35%;
   }
 }
